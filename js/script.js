@@ -27,6 +27,11 @@ close.addEventListener("click", function () {
     loginPopup.classList.remove("show");
 });
 
+document.getElementById("myBtn").onclick = function () { myFunction() };
+function myFunction() {
+    document.getElementById("myPopup").classList.toggle("show");
+}
+
 
 
 

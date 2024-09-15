@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* popUp */
+
+.login-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1099;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.login-popup.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.login-popup .box {
+    background-color: #ffffff;
+    width: 550px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    margin-left: 50px;
+    transition: all 1s ease;
+
+}
+
+.login-popup.show .box {
+    opacity: 1;
+    margin-left: 0;
+}
+
+.login-popup .box .img-area {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-popup .box .img-area h1 {
+    font-size: 30px;
+}
+
+.login-popup .box .img-area .img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: zoomInOut 7s linear infinite;
+    z-index: -1;
+
+}
+
+@keyframes zoomInOut {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.login-popup .box .form {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 40px 30px;
+}
+
+.login-popup .box .form h1 {
+    color: #000000;
+    font-size: 30px;
+    margin: 0 0 30px;
+}
+
+.login-popup .box .form .form-control {
+    height: 45px;
+    margin-bottom: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    font-size: 15px;
+    color: #000000;
+}
+
+.login-popup .box .form .form-control:focus {
+    outline: none;
+}
+
+.login-popup .box .form label {
+    font-size: 15px;
+    color: #555555;
+}
+
+.login-popup .box .form .btn {
+    width: 100%;
+    background-color: #E91E63;
+    margin-top: 40px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.login-popup .box .form .btn:focus {
+    outline: none;
+}
+
+.login-popup .box .form .close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .login-popup .box {
+        width: calc(100% - 30px);
+    }
+
+    .login-popup .box .img-area {
+        display: none;
+    }
+
+    .login-popup .box .form {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* popUp */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Inter', !important;
+}
+
+.user-div a {
+    list-style: none;
+    text-decoration: none;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+.custom-btn {
+    color: white;
+    border-radius: 0px;
+}
+
+.custon-btn p {}
+
+.nav-link {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    color: #0D0A19;
+}
+
+.navbar-menu {
+    margin-left: 40px;
+}
+
+.nav-manu-p {
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.logoDiv {
+    background-color: #192841;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+/* Banner-Section-start----------------->*/
+.banner-button-class {
+    text-align: center;
+}
+
+.banner-button-class button {
+    margin-top: 50px;
+    margin-left: 20px;
+
+    border-radius: 30px;
+    background-color: #192841;
+}
+
+.banner-button-class button P {
+    font-weight: 700;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 15px 25px;
+}
+
+.banner-button-class button P i {
+    margin-right: 10px;
+}
+
+.section-1 {
+    background-image: url(../img/about-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.contact-banner {
+    background-image: url(../img/contact-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.services-banner {
+    background-image: url(../img/services-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.another-banner {
+    background-image: url(../img/istockphoto-1337358891-612x612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.section-1 h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: -0.3047px;
+    color: #ffffff;
+}
+
+.contact-banner h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: -0.3047px;
+    color: #ffffff;
+}
+
+.contact-container {
+    margin: 80px 0px;
+}
+
+.contact-row {
+    text-align: center;
+    justify-content: center;
+}
+
+.icon-contant-li {
+    margin-right: 10px;
+}
+
+.translate-middle {
+    transform: translate(-50%, -50%) !important;
+    margin-left: 50px;
+}
+
+.card:focus {
+    outline: 0 !important;
+}
+
+.mainTeamSection h2 {
+    text-align: center;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.teamImg img {
+    height: 327px;
+    width: 500px;
+    margin-top: 40px;
+    margin-left: 100px;
+
+}
+
+.expences-div {
+    margin-top: 60px;
+    background-color: #e6e7e8;
+    padding: 50px 20px;
+}
+
+.row .card img {
+    height: 200px;
+    width: 200px;
+}
+
+.priceSection {
+    background-color: #003365;
+}
+
+.priceSection h2 {
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.buttonTagP {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.column1 button {
+    padding: 15px 40px;
+    border-radius: 25px 25px;
+}
+
+.leftColumn {
+    text-align: right;
+}
+
+.leftColumn h1 {
+    color: #003365;
+    margin-bottom: 45px;
+    font-weight: 900;
+}
+
+.img-div-team {
+    text-align: right;
+    justify-content: right;
+}
+
+.right-column-img {
+    display: flex;
+    align-items: center;
+
+}
+
+.ulDiv ul {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ulDiv button {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background-color: #003365;
+    border-radius: 25px 25px;
+}
+
+.ulDiv ul li {
+    list-style: none;
+}
+
+.ulDiv ul li img {
+    height: 200px;
+    width: auto;
+}
+
+.navbar {
+    background-color: #192841;
+}
+
+.navMenu ul li a {
+    color: #ffffff;
+
+}
+
+.navMenu {
+    justify-content: center;
+}
+
+.footer_bg_color {
+    background-color: #192841;
+}
+
+
+/* services-section-css */
+.lower-banner {
+    background-color: #192841;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    padding: 100px 300px;
+    font-size: large;
+}
+
+@media only screen and (max-width: 600px) {
+    .lower-banner {
+        background-color: #192841;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        padding: 10px 30px;
+        font-size: small;
+    }
+}
+
+.over-vew-items {
+    text-align: center;
+
+}
+
+.over-vew-h1 {
+    text-align: center;
+}
+
+/* services-section-css-end */
+
+.pricing-table {
+    text-align: center;
+    justify-content: center;
+}
+
+.our-pricing-table {
+    background-color: #949191;
+}
+
+.pricing-span {
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.pricing-icon {
+    font-size: 25px;
+}
+
+.maintenance-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.maintenance-sec {
+    background-color: #e6e7e8;
+}
